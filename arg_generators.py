@@ -43,7 +43,7 @@ def exp1_gen_args(config):
     # sub-seeds
     sub_seeds = []
     for r in range(config["repeat"]):
-        sub_seeds.append(int(np.random.randint(2 ** 32)))
+        sub_seeds.append(int(np.random.randint(2 ** 31)))
 
     # maximum number of sources and microphones in the simulation
     n_sources = np.max(config["n_interferers"]) + np.max(config["n_targets"])
@@ -78,7 +78,7 @@ def exp1_gen_args(config):
         print("Generate the rooms and measure rt60")
 
         # choose all the files in advance
-        gen_files_seed = int(np.random.randint(2 ** 32, dtype=np.uint32))
+        gen_files_seed = int(np.random.randint(2 ** 31, dtype=np.uint32))
         all_wav_files = sampling(
             config["repeat"],
             n_sources,
@@ -156,7 +156,7 @@ def exp2_gen_args(config):
     np.random.seed(config["seed"])
 
     # choose all the files in advance
-    gen_files_seed = int(np.random.randint(2 ** 32, dtype=np.uint32))
+    gen_files_seed = int(np.random.randint(2 ** 31, dtype=np.uint32))
     all_wav_files = sampling(
         config["repeat"],
         np.max(config["n_targets"]) + np.max(config["n_interferers"]),
@@ -168,7 +168,7 @@ def exp2_gen_args(config):
     # sub-seeds
     sub_seeds = []
     for r in range(config["repeat"]):
-        sub_seeds.append(int(np.random.randint(2 ** 32)))
+        sub_seeds.append(int(np.random.randint(2 ** 31)))
 
     # create all distinct interferers locations
     interferers_locs = []

@@ -116,7 +116,7 @@ def run(args, parameters):
     ###########
 
     # shape: (n_frames, n_freq, n_mics)
-    X_all = pra.transform.analysis(mix.T, framesize, hop, win=win_a)
+    X_all = pra.transform.stft.analysis(mix.T, framesize, hop, win=win_a)
     X_mics = X_all[:, :, :n_mics]
 
     # store results in a list, one entry per algorithm

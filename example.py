@@ -133,7 +133,7 @@ if __name__ == "__main__":
 
     # fix the randomness for repeatability
     if args.seed is None:
-        seed = np.random.randint(2 ** 32)
+        seed = np.random.randint(2 ** 31)
     else:
         seed = args.seed
     print(f"The RNG seed is {seed}")
@@ -161,7 +161,7 @@ if __name__ == "__main__":
         win_a = pra.hamming(framesize)
     else:  # default is Hann
         win_a = pra.hann(framesize)
-    win_s = pra.transform.compute_synthesis_window(win_a, hop)
+    win_s = pra.transform.stft.compute_synthesis_window(win_a, hop)
 
     # Process number of iterations
     if args.n_iter is None:
@@ -212,7 +212,7 @@ if __name__ == "__main__":
         n_sources,
         f"{samples_dir}/metadata.json",
         gender_balanced=True,
-        seed=np.random.randint(2 ** 32),
+        seed=np.random.randint(2 ** 31),
     )[0]
     signals = wav_read_center(wav_files, seed=123)
 
@@ -296,7 +296,7 @@ if __name__ == "__main__":
     ###########
 
     # shape: (n_frames, n_freq, n_mics)
-    X_all = pra.transform.analysis(mix.T, framesize, hop, win=win_a).astype(
+    X_all = pra.transform.stft.analysis(mix.T, framesize, hop, win=win_a).astype(
         np.complex128
     )
     X_mics = X_all[:, :, :n_mics]
@@ -332,9 +332,9 @@ if __name__ == "__main__":
 
     # Run iSTFT
     if Y.shape[2] == 1:
-        y = pra.transform.synthesis(Y[:, :, 0], framesize, hop, win=win_s)[:, None]
+        y = pra.transform.stft.synthesis(Y[:, :, 0], framesize, hop, win=win_s)[:, None]
     else:
-        y = pra.transform.synthesis(Y, framesize, hop, win=win_s)
+        y = pra.transform.stft.synthesis(Y, framesize, hop, win=win_s)
     y = y[framesize - hop :, :].astype(np.float64)
 
     if args.algo != "blinkiva":

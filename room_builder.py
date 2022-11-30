@@ -120,15 +120,15 @@ def convergence_callback(
         win_a = pra.hamming(framesize)
     else:  # default is Hann
         win_a = pra.hann(framesize)
-    win_s = pra.transform.compute_synthesis_window(win_a, hop)
+    win_s = pra.transform.stft.compute_synthesis_window(win_a, hop)
 
     # projection back
     Y = bss.project_back(Y, X[:, :, 0])
 
     if Y.shape[2] == 1:
-        y = pra.transform.synthesis(Y[:, :, 0], framesize, hop, win=win_s)[:, None]
+        y = pra.transform.stft.synthesis(Y[:, :, 0], framesize, hop, win=win_s)[:, None]
     else:
-        y = pra.transform.synthesis(Y, framesize, hop, win=win_s)
+        y = pra.transform.stft.synthesis(Y, framesize, hop, win=win_s)
     y = y[framesize - hop :, :].astype(np.float64)
 
     if not algo_is_overdetermined:
