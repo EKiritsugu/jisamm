@@ -9,7 +9,7 @@ import pyroomacoustics as pra
 import rrtools
 
 # Get the data if needed
-from get_data import get_data, samples_dir
+from get_data import get_data, samples_dir# 下载音频文件
 from room_builder import random_room_builder, callback_noise_mixer
 
 from arg_generators import generate
@@ -19,7 +19,7 @@ sys.path.append(samples_dir)
 from generate_samples import sampling, wav_read_center
 
 # find the absolute path to this file
-base_dir = os.path.abspath(os.path.split(__file__)[0])
+base_dir = os.path.abspath(os.path.split(__file__)[0])# 当前文件夹目录
 
 
 def init(parameters):

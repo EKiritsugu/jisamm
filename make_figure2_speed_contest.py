@@ -192,7 +192,7 @@ if __name__ == "__main__":
         g.set_titles(col_template="{col_name} Mics", row_template="{row_name} Sources")
 
         # remove empty plot
-        g.fig.delaxes(g.axes[2, 0])
+        # g.fig.delaxes(g.axes[2, 0])
 
         for c in range(4):
             g.facet_axis(1, c).set_title("")
