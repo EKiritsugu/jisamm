@@ -6,6 +6,7 @@ python ./make_figure_rt60_hist.py ./data/experiment1_rooms.json
 # figure with box-plots of SDR/SIR
 # SNR 5d dB: data/20200226-225324_speed_contest_608cd46e9e
 # SNR 10 dB: data/20200227-114954_speed_contest_f96a1824ad
+# data\20221206-103917_speed_contest_c02b439b88
 python ./make_figure1_separation_hist.py \
   data/20200227-114954_speed_contest_f96a1824ad
 
