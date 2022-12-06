@@ -4,9 +4,16 @@
   "seed": 12345,
   "repeat": 30,
   "sinr": [-5, 0, 5, 10],
-  "n_targets": [1, 2, 3],
-  "n_interferers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-  "n_mics": [7],
+
+  "_n_targets": [1, 2, 3],
+  "n_targets": [2],
+
+  "_n_interferers": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+  "n_interferers": [10],
+
+  "_n_mics": [7],
+  "n_mics": [2],
+
   "dist_crit_ratio": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
   "samples_list" : "./samples/metadata.json",
   "mix_params": {"diffuse_ratio": 0.99, "ref_mic": 0},
@@ -20,7 +27,8 @@
       "absorption": 0.331,
       "max_order": 34
     },
-    "mic_array_geometry_m": [
+
+    "_mic_array_geometry_m": [
       [0.0, 0.0, 0.0],
       [0.02, 0.0, 0.0],
       [0.01, 0.017, 0.0],
@@ -29,6 +37,13 @@
       [-0.01, -0.017, 0.0],
       [0.01, -0.017, 0.0]
     ],
+    "mic_array_geometry_m": [
+      [0.02, 0.0, 0.0],
+      [-0.02, 0.0, 0.0]
+    ],
+
+
+
     "mic_array_location_m": [4.496, 5.889, 2.327]
   },
 
@@ -39,15 +54,7 @@
   },
 
   "algorithm_kwargs" : {
-    "five_laplace" : {
-      "algo" : "five",
-      "kwargs" : {
-        "n_iter" : 50,
-        "model" : "laplace",
-        "init": "pca",
-        "callback_checkpoints" : [50]
-      }
-    },
+
     "overiva_ip_laplace" : {
       "algo" : "overiva-ip",
       "kwargs" : {
@@ -66,17 +73,7 @@
         "callback_checkpoints" : [50]
       }
     },
-    "ogive_laplace" : {
-      "algo" : "ogive-switch",
-      "kwargs" : {
-        "n_iter": 1000,
-        "step_size": 0.1,
-        "tol": 1e-3,
-        "model": "laplace",
-        "init": "pca",
-        "callback_checkpoints" : [1000]
-      }
-    },
+
     "auxiva2_laplace" : {
       "algo" : "auxiva2",
       "kwargs" : {
@@ -85,25 +82,8 @@
         "init": "pca",
         "callback_checkpoints" : [50]
       }
-    },
-    "overiva_demix_bg_laplace" : {
-      "algo" : "overiva-demix-bg",
-      "kwargs" : {
-        "n_iter" : 50,
-        "model" : "laplace",
-        "init": "pca",
-        "callback_checkpoints" : [50]
-      }
-    },
-    "auxiva_pca" : {
-      "algo" : "auxiva-pca",
-      "kwargs" : {
-        "n_iter" : 50,
-        "model" : "laplace",
-        "init": "pca",
-        "callback_checkpoints" : [50]
-      }
     }
+
   }
 }
 
