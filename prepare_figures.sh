@@ -1,4 +1,6 @@
 #!/bin/bash
+# data/20221207-132246_reverb_interf_performance_440ea502bf/
+
 
 # make the figure with the RT60 distribution
 python ./make_figure_rt60_hist.py ./data/experiment1_rooms.json
