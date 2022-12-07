@@ -2,7 +2,7 @@
   "name": "reverb_interf_performance",
 
   "seed": 12345,
-  "repeat": 30,
+  "repeat": 1,
   "sinr": [-5, 0, 5, 10],
 
   "_n_targets": [1, 2, 3],
