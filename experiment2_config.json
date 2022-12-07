@@ -3,7 +3,7 @@
 
   "seed": 12345,
   "repeat": 30,
-  "sinr": [-5, 0, 5, 10],
+  "sinr": [-5, 0, 10],
 
 
   "n_targets": [2],
@@ -13,7 +13,7 @@
 
   "n_mics": [2],
 
-  "dist_crit_ratio": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "dist_crit_ratio": [0.1, 0.25,  0.5,  0.75,  1.0],
   "samples_list" : "./samples/metadata.json",
   "mix_params": {"diffuse_ratio": 0.99, "ref_mic": 0},
 
