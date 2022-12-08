@@ -334,3 +334,13 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
         print('Total actual processing time: {} ({} s)'.format(all_loops_format, all_loops))
 
     print('Saved data to folder: ' + data_dir)
+
+    from data_loader import load_data
+
+    df, rt60, parameters = load_data([data_dir])
+
+    # print(df)
+
+    df.to_csv(data_dir + 'out.csv')
+    # with open(dir, 'r') as file:
+    print('done')
