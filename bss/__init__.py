@@ -1,22 +1,3 @@
-# Copyright (c) 2020 Robin Scheibler
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in all
-# copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
 """
 This package contains the main algorithms for
 overdetermined independent vector analysis
@@ -76,7 +57,54 @@ def separate(
         X0 = X
         W0 = None
 
-    Y, W = algos[algorithm](X0, proj_back=False, return_filters=True, **kwargs)
+    from ilrma_t_function import *
+    import pyroomacoustics as pra
+    if algorithm == 'ilrma-t-IP':
+        Y = ilrma_t_iss_joint(X, n_iter=n_iter)
+    elif algorithm == 'ilrma-t-iss-seq':
+        Y = ilrma_t_iss_seq(X, n_iter=n_iter)
+    elif algorithm == 'ilrma-t-iss-joint':
+        Y = ilrma_t_iss_joint(X, n_iter=n_iter)
+    elif algorithm == 'ilrma-IP':
+        Y = pra.bss.ilrma(X, n_iter=n_iter)
+    elif algorithm == 'ilrma-iss':
+        from ilrma_iss import ilrma_iss
+
+        Y = ilrma_iss(X, n_iter=n_iter)
+    elif algorithm == 'auxiva':
+        Y = pra.bss.auxiva(X, n_iter=n_iter)
+    elif algorithm == 'wpe+ilrma-IP':
+        from nara_wpe.wpe import wpe
+
+        Y = wpe(X.transpose(1, 2, 0),
+                taps=taps,
+                delay=delay,
+                iterations=50,
+                statistics_mode='full'
+                ).transpose(2, 0, 1)
+        Y = pra.bss.ilrma(Y, n_iter=50)
+    elif algorithm == 'wpe_6':
+
+
+        Y = wpe_v(X,
+                taps=taps,
+                delay=delay,
+                iterations=iterations,
+                )
+
+    elif algorithm == 'my_ilrma_t':
+        Y = my_ilrma_t(X, n_iter=n_iter)
+    elif algorithm == 'my2_ilrma_t':
+        Y = my2_ilrma_t(X, n_iter=n_iter)
+    elif algorithm == 'my3_ilrma_t':
+        Y = my3_ilrma_t(X, n_iter=n_iter)
+    elif algorithm == 'my4_ilrma_t':
+        Y = my4_ilrma_t(X, n_iter=n_iter)
+    elif algorithm == 'my5_ilrma_t':
+        Y = my5_ilrma_t(X, n_iter=n_iter)
+
+    else:
+        Y, W = algos[algorithm](X0, proj_back=False, return_filters=True, **kwargs)
 
     if proj_back:
         Y = project_back(Y, X[:, :, 0])
