@@ -127,6 +127,8 @@ code is running or not.
         python ./paper_simulation.py ./experiment1_config.json
         python ./paper_simulation.py ./experiment2_config.json
 
+        python ./paper_simulation.py ./experiment3_config.json
+
         # stop the workers
         ipcluster stop
 
