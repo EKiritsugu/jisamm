@@ -175,6 +175,9 @@ is_determined = {
     "ogive-demix": False,
     "ogive-switch": False,
     "fastiva": False,
+    "ilrma-t-ip":True,
+    "ilrma-t-iss-joint":True,
+    "ilrma-t-iss-seq":True
 }
 
 is_overdetermined = {
@@ -194,6 +197,9 @@ is_overdetermined = {
     "ogive-demix": True,
     "ogive-switch": True,
     "fastiva": True,
+        "ilrma-t-ip":False,
+    "ilrma-t-iss-joint":False,
+    "ilrma-t-iss-seq":False
 }
 
 is_iterative = {
@@ -213,4 +219,7 @@ is_iterative = {
     "ogive-demix": True,
     "ogive-switch": True,
     "fastiva": True,
+        "ilrma-t-ip":True,
+    "ilrma-t-iss-joint":True,
+    "ilrma-t-iss-seq":True
 }
