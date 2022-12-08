@@ -2,6 +2,7 @@
 This package contains the main algorithms for
 overdetermined independent vector analysis
 """
+
 from . import default
 from .auxiva_pca import auxiva_pca
 from .fastiva import fastiva
@@ -13,6 +14,9 @@ from .overiva import (auxiva, auxiva2, overiva, overiva_demix_bg,
 from .pca import pca
 from .projection_back import project_back
 from .utils import cost_iva
+
+
+from .ilrma_t_function import *
 
 algos = {
     "auxiva": auxiva,
@@ -57,51 +61,48 @@ def separate(
         X0 = X
         W0 = None
 
-    from ilrma_t_function import *
+    
     import pyroomacoustics as pra
     if algorithm == 'ilrma-t-IP':
-        Y = ilrma_t_iss_joint(X, n_iter=n_iter)
+        Y = ilrma_t_iss_joint(X, proj_back=False, return_filters=True, **kwargs)
     elif algorithm == 'ilrma-t-iss-seq':
-        Y = ilrma_t_iss_seq(X, n_iter=n_iter)
+        Y = ilrma_t_iss_seq(X, proj_back=False, return_filters=True, **kwargs)
     elif algorithm == 'ilrma-t-iss-joint':
-        Y = ilrma_t_iss_joint(X, n_iter=n_iter)
+        Y = ilrma_t_iss_joint(X, proj_back=False, return_filters=True, **kwargs)
     elif algorithm == 'ilrma-IP':
-        Y = pra.bss.ilrma(X, n_iter=n_iter)
-    elif algorithm == 'ilrma-iss':
-        from ilrma_iss import ilrma_iss
+        Y = pra.bss.ilrma(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'ilrma-iss':
+    #     from ilrma_iss import ilrma_iss
 
-        Y = ilrma_iss(X, n_iter=n_iter)
-    elif algorithm == 'auxiva':
-        Y = pra.bss.auxiva(X, n_iter=n_iter)
-    elif algorithm == 'wpe+ilrma-IP':
-        from nara_wpe.wpe import wpe
+    #     Y = ilrma_iss(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'auxiva':
+    #     Y = pra.bss.auxiva(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'wpe+ilrma-IP':
+    #     from nara_wpe.wpe import wpe
 
-        Y = wpe(X.transpose(1, 2, 0),
-                taps=taps,
-                delay=delay,
-                iterations=50,
-                statistics_mode='full'
-                ).transpose(2, 0, 1)
-        Y = pra.bss.ilrma(Y, n_iter=50)
-    elif algorithm == 'wpe_6':
-
-
-        Y = wpe_v(X,
-                taps=taps,
-                delay=delay,
-                iterations=iterations,
-                )
-
-    elif algorithm == 'my_ilrma_t':
-        Y = my_ilrma_t(X, n_iter=n_iter)
-    elif algorithm == 'my2_ilrma_t':
-        Y = my2_ilrma_t(X, n_iter=n_iter)
-    elif algorithm == 'my3_ilrma_t':
-        Y = my3_ilrma_t(X, n_iter=n_iter)
-    elif algorithm == 'my4_ilrma_t':
-        Y = my4_ilrma_t(X, n_iter=n_iter)
-    elif algorithm == 'my5_ilrma_t':
-        Y = my5_ilrma_t(X, n_iter=n_iter)
+    #     Y = wpe(X.transpose(1, 2, 0),
+    #             taps=taps,
+    #             delay=delay,
+    #             iterations=50,
+    #             statistics_mode='full'
+    #             ).transpose(2, 0, 1)
+    #     Y = pra.bss.ilrma(Y, n_iter=50)
+    # elif algorithm == 'wpe_6':
+    #     Y = wpe_v(X,
+    #             taps=taps,
+    #             delay=delay,
+    #             iterations=iterations,
+    #             )
+    # elif algorithm == 'my_ilrma_t':
+    #     Y = my_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'my2_ilrma_t':
+    #     Y = my2_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'my3_ilrma_t':
+    #     Y = my3_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'my4_ilrma_t':
+    #     Y = my4_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
+    # elif algorithm == 'my5_ilrma_t':
+    #     Y = my5_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
 
     else:
         Y, W = algos[algorithm](X0, proj_back=False, return_filters=True, **kwargs)

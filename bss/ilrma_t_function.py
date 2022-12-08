@@ -5,7 +5,7 @@
 import os
 import soundfile as sf
 from nara_wpe.utils import stft, istft
-from projection_back import projection_back
+# from .projection_back import projection_back
 import numpy as np
 ######################################################################################################################
 

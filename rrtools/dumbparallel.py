@@ -88,7 +88,7 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
     parser.add_argument('-t', '--test', action='store_true', help='test mode, runs a single loop of the simulation')
     parser.add_argument('-s', '--serial', action='store_true', help='run in a serial loop, ipyparallel not called')
     parser.add_argument('--dummy', action='store_true', help='tags the directory as dummy, can be used for running small batches')
-    parser.add_argument('parameters', type=str, help='JSON file containing simulation parameters',default = 'experiment3_config.json')
+    parser.add_argument('--parameters', type=str, help='JSON file containing simulation parameters',default = 'experiment3_config.json')
 
     cli_args = parser.parse_args()
     ipcluster_profile = cli_args.profile
