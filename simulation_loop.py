@@ -111,16 +111,17 @@ def run(args, parameters):
         name = params["algo"]
         kwargs = params["kwargs"]
 
-        if not bss.is_determined[name] and bss.is_dual_update[name] and n_targets == 1:
-            # Overdetermined algorithms with dual updates cannot be used
-            # in the single source case (they can extract at least two sources)
-            continue
-        elif bss.is_single_source[name] and n_targets > 1:
-            # doesn't work for multi source scenario
-            continue
-        elif bss.is_overdetermined[name] and n_targets == n_mics:
-            # don't run the overdetermined stuff in determined case
-            continue
+        # if not bss.is_determined[name] and bss.is_dual_update[name] and n_targets == 1:
+        #     # Overdetermined algorithms with dual updates cannot be used
+        #     # in the single source case (they can extract at least two sources)
+        #     continue
+
+        # elif bss.is_single_source[name] and n_targets > 1:
+        #     # doesn't work for multi source scenario
+        #     continue
+        # elif bss.is_overdetermined[name] and n_targets == n_mics:
+        #     # don't run the overdetermined stuff in determined case
+        #     continue
 
         results.append(
             {
