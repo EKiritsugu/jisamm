@@ -135,6 +135,9 @@ is_single_source = {
     "ogive-demix": True,
     "ogive-switch": True,
     "fastiva": False,
+        "ilrma-t-ip":False,
+    "ilrma-t-iss-joint":False,
+    "ilrma-t-iss-seq":False
 }
 
 # This is a list that indicates which algorithms
@@ -156,6 +159,9 @@ is_dual_update = {
     "ogive-demix": False,
     "ogive-switch": False,
     "fastiva": False,
+        "ilrma-t-ip":False,
+    "ilrma-t-iss-joint":False,
+    "ilrma-t-iss-seq":False
 }
 
 is_determined = {
