@@ -91,6 +91,17 @@
           "taps": 5,
           "delay": 2
         }
+      },
+      "ilrma" : {
+        "algo" : "ilrma",
+        "kwargs" : {
+            "n_components":2,
+          "n_iter" : 50,
+
+          "init": "pca",
+          "callback_checkpoints" : [50]
+
+        }
       }
     }
   }

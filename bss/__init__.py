@@ -62,15 +62,15 @@ def separate(
         W0 = None
 
     
-    import pyroomacoustics as pra
+
     if algorithm == 'ilrma-t-ip':
         Y = ilrma_t_ip(X, return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-seq':
         Y = ilrma_t_iss_seq(X,  return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-joint':
         Y = ilrma_t_iss_joint(X,  return_filters=False, **kwargs)
-    elif algorithm == 'ilrma-IP':
-        Y = pra.bss.ilrma(X,  return_filters=False, **kwargs)
+    elif algorithm == 'ilrma':
+        Y = ilrma(X,  return_filters=False, **kwargs)
 
 
     else:
@@ -106,7 +106,8 @@ is_single_source = {
     "fastiva": False,
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
-    "ilrma-t-iss-seq":False
+    "ilrma-t-iss-seq":False,
+    "ilrma": False
 }
 
 # This is a list that indicates which algorithms
@@ -130,7 +131,8 @@ is_dual_update = {
     "fastiva": False,
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
-    "ilrma-t-iss-seq":False
+    "ilrma-t-iss-seq":False,
+    "ilrma": False
 }
 
 is_determined = {
@@ -152,7 +154,8 @@ is_determined = {
     "fastiva": False,
     "ilrma-t-ip":True,
     "ilrma-t-iss-joint":True,
-    "ilrma-t-iss-seq":True
+    "ilrma-t-iss-seq":True,
+    "ilrma": True
 }
 
 is_overdetermined = {
@@ -174,7 +177,8 @@ is_overdetermined = {
     "fastiva": True,
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
-    "ilrma-t-iss-seq":False
+    "ilrma-t-iss-seq":False,
+    "ilrma": False
 }
 
 is_iterative = {
@@ -196,5 +200,6 @@ is_iterative = {
     "fastiva": True,
         "ilrma-t-ip":True,
     "ilrma-t-iss-joint":True,
-    "ilrma-t-iss-seq":True
+    "ilrma-t-iss-seq":True,
+    "ilrma": True
 }
