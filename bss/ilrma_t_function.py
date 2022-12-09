@@ -653,7 +653,6 @@ def ilrma_t_iss_joint(
 
 
 
-# 怎么看都是，ilrma算法用了不如不用，直接拿iva似乎更好
 
 def ilrma(
         X,
