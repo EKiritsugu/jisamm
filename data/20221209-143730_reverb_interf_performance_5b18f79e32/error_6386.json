@@ -1,0 +1,96 @@
+{
+    "algorithm": "ilrma-t-iss-seq",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 50,
+        "model": "laplace",
+        "init": "pca",
+        "callback_checkpoints": [
+            50
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "ilrma-t-iss-seq",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.4130625,
+        "dist_ratio": 1.0,
+        "sinr": 0,
+        "seed": 1675701733,
+        "sdr": [
+            [
+                -7.077790356373967,
+                -7.114129436797359,
+                -6.688646562854475
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -7.051723680495368,
+                -7.088098460023491,
+                -6.456883808520613
+            ],
+            NaN
+        ],
+        "cost": [
+            3860232.365733901
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 337206
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 176, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 69, in separate\n    Y = ilrma_t_iss_seq(X,  return_filters=False, **kwargs)\nTypeError: ilrma_t_iss_seq() got an unexpected keyword argument 'model'\n"
+},
+{
+    "algorithm": "ilrma-t-iss-joint",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 50,
+        "model": "laplace",
+        "init": "pca",
+        "callback_checkpoints": [
+            50
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "ilrma-t-iss-joint",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.4130625,
+        "dist_ratio": 1.0,
+        "sinr": 0,
+        "seed": 1675701733,
+        "sdr": [
+            [
+                -7.077790356373967,
+                -7.114129436797359,
+                -6.688646562854475
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -7.051723680495368,
+                -7.088098460023491,
+                -6.456883808520613
+            ],
+            NaN
+        ],
+        "cost": [
+            3860232.365733901
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 337206
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 176, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 71, in separate\n    Y = ilrma_t_iss_joint(X,  return_filters=False, **kwargs)\nTypeError: ilrma_t_iss_joint() got an unexpected keyword argument 'model'\n"
+},
