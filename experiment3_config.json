@@ -47,7 +47,7 @@
     },
   
     "algorithm_kwargs" : {
-      "auxiva2_laplace" : {
+      "auxiva" : {
         "algo" : "auxiva",
         "kwargs" : {
           "n_iter" : 50,
@@ -73,7 +73,7 @@
         "kwargs" : {
             "n_components":2,
           "n_iter" : 50,
-          "model" : "laplace",
+
           "init": "pca",
           "callback_checkpoints" : [50],
           "taps": 5,
@@ -85,7 +85,7 @@
         "kwargs" : {
             "n_components":2,
           "n_iter" : 50,
-          "model" : "laplace",
+
           "init": "pca",
           "callback_checkpoints" : [50],
           "taps": 5,
