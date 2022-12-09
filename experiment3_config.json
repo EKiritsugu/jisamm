@@ -48,7 +48,7 @@
   
     "algorithm_kwargs" : {
       "auxiva2_laplace" : {
-        "algo" : "auxiva2",
+        "algo" : "auxiva",
         "kwargs" : {
           "n_iter" : 50,
           "model" : "laplace",
