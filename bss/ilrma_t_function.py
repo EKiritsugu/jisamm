@@ -211,6 +211,7 @@ def _stable_solve(A, B):
 def ilrma_t_ip(
     X,
     n_components = 2, 
+    n_src = None,
     n_iter = 20, 
     taps = 5, 
     delay = 2,
@@ -342,6 +343,7 @@ def ilrma_t_ip(
 def ilrma_t_iss_seq(
     X,
     n_components = 2, 
+    n_src = None,
     n_iter = 20, 
     taps = 5, 
     delay = 2,
@@ -494,6 +496,7 @@ def ilrma_t_iss_seq(
 def ilrma_t_iss_joint(
     X,
     n_components = 2, 
+    n_src = None,
     n_iter = 20, 
     taps = 5, 
     delay = 2,

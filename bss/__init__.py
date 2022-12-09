@@ -63,8 +63,8 @@ def separate(
 
     
     import pyroomacoustics as pra
-    if algorithm == 'ilrma-t-IP':
-        Y = ilrma_t_iss_joint(X, return_filters=False, **kwargs)
+    if algorithm == 'ilrma-t-ip':
+        Y = ilrma_t_ip(X, return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-seq':
         Y = ilrma_t_iss_seq(X,  return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-joint':
