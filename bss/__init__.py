@@ -64,45 +64,14 @@ def separate(
     
     import pyroomacoustics as pra
     if algorithm == 'ilrma-t-IP':
-        Y = ilrma_t_iss_joint(X, proj_back=False, return_filters=True, **kwargs)
+        Y = ilrma_t_iss_joint(X, return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-seq':
-        Y = ilrma_t_iss_seq(X, proj_back=False, return_filters=True, **kwargs)
+        Y = ilrma_t_iss_seq(X,  return_filters=False, **kwargs)
     elif algorithm == 'ilrma-t-iss-joint':
-        Y = ilrma_t_iss_joint(X, proj_back=False, return_filters=True, **kwargs)
+        Y = ilrma_t_iss_joint(X,  return_filters=False, **kwargs)
     elif algorithm == 'ilrma-IP':
-        Y = pra.bss.ilrma(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'ilrma-iss':
-    #     from ilrma_iss import ilrma_iss
+        Y = pra.bss.ilrma(X,  return_filters=False, **kwargs)
 
-    #     Y = ilrma_iss(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'auxiva':
-    #     Y = pra.bss.auxiva(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'wpe+ilrma-IP':
-    #     from nara_wpe.wpe import wpe
-
-    #     Y = wpe(X.transpose(1, 2, 0),
-    #             taps=taps,
-    #             delay=delay,
-    #             iterations=50,
-    #             statistics_mode='full'
-    #             ).transpose(2, 0, 1)
-    #     Y = pra.bss.ilrma(Y, n_iter=50)
-    # elif algorithm == 'wpe_6':
-    #     Y = wpe_v(X,
-    #             taps=taps,
-    #             delay=delay,
-    #             iterations=iterations,
-    #             )
-    # elif algorithm == 'my_ilrma_t':
-    #     Y = my_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'my2_ilrma_t':
-    #     Y = my2_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'my3_ilrma_t':
-    #     Y = my3_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'my4_ilrma_t':
-    #     Y = my4_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
-    # elif algorithm == 'my5_ilrma_t':
-    #     Y = my5_ilrma_t(X, proj_back=False, return_filters=True, **kwargs)
 
     else:
         Y, W = algos[algorithm](X0, proj_back=False, return_filters=True, **kwargs)
