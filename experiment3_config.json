@@ -2,8 +2,8 @@
     "name": "reverb_interf_performance",
   
     "seed": 12345,
-    "repeat": 1,
-    "sinr": [ 0],
+    "repeat": 30,
+    "sinr": [ 0, 10],
   
     "n_targets": [3],
   
@@ -18,12 +18,12 @@
     "mix_params": {"diffuse_ratio": 0.99, "ref_mic": 0},
   
     "room": {
-      "rt60_s": 0.415,
+      "rt60_s": 0.600,
       "critical_distance_m": 1.95,
       "room_kwargs": {
         "p": [9, 12, 4.5],
         "fs": 16000,
-        "absorption": 0.331,
+        "absorption": 0.230,
         "max_order": 34
       },
   
