@@ -1,4 +1,4 @@
-,Algorithm,Sources,Interferers,Mics,RT60,Distance,SINR,seed,Iteration,Iteration_Index,Runtime [s],SI-SDR [dB],SI-SIR [dB],ΔSI-SDR [dB],ΔSI-SIR [dB],Success
+,Algorithm,Sources,Interferers,Mics,RT60,Distance,SINR,seed,Iteration,Iteration_Index,Runtime [s],SI-SDR [dB],SI-SIR [dB],_SI-SDR [dB],_SI-SIR [dB],Success
 0,auxiva,3,10,3,0.634,1,10,1995074678,0,0,0,-3.588335112,-3.479636135,0,0,0
 1,auxiva,3,10,3,0.634,1,10,1995074678,50,1,0.20273205,-0.151027337,2.85964978,3.437307774,6.339285915,0.333333333
 2,ilrma-t-IP,3,10,3,0.634,1,10,1995074678,0,0,0,-3.588335112,-3.479636135,0,0,0
