@@ -307,9 +307,10 @@ def ilrma_t_ip(
 
             A_p[:, :n_src] = np.linalg.solve(W_p, eyes[:, :, s])
 
-            V_inv = _stable_solve(V_wpe, eyes_t)
-            P[:, s, :] = np.conj(_stable_solve(V_wpe, A_p[:, :, None])).squeeze()
-            denom_wpe = np.conj(A_p[:, None, :]) @ V_inv @ A_p[:, :, None]
+            # V_inv = _stable_solve(V_wpe, eyes_t)
+            V_inv_ap = _stable_solve(V_wpe, A_p[:, :, None])
+            P[:, s, :] = np.conj(V_inv_ap).squeeze()
+            denom_wpe = np.conj(A_p[:, None, :]) @ V_inv_ap
             P[:, s, :] /= np.sqrt(denom_wpe[:, :, 0])
 
 
