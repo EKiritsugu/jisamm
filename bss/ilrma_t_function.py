@@ -201,7 +201,7 @@ def _stable_solve(A, B):
             try:
                 C[i] = np.linalg.solve(A[i], B[i])
             except np.linalg.LinAlgError:
-                C[i] = np.linalg.lstsq(A[i], B[i])[0]
+                C[i] = np.linalg.lstsq(A[i], B[i],rcond = -1)[0]
         return C.reshape(*shape_B)
 
 

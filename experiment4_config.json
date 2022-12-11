@@ -5,12 +5,12 @@
     "repeat": 30,
     "sinr": [ 0, 10],
   
-    "n_targets": [2],
+    "n_targets": [3],
   
     "n_interferers": [ 10],
     
   
-    "n_mics": [2],
+    "n_mics": [3],
   
   
     "dist_crit_ratio": [1.0],
@@ -30,6 +30,8 @@
       "mic_array_geometry_m": [
 
         [0.02, 0.0, 0.0],
+
+        [0, 0.02, 0],
   
         [-0.02, 0.0, 0.0]
   
