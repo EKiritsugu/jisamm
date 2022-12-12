@@ -3,7 +3,7 @@
   
     "seed": 12345,
     "repeat": 30,
-    "sinr": [ 30],
+    "sinr": [ 10, 20, 30],
   
     "n_targets": [3],
   
@@ -54,7 +54,31 @@
         "algo" : "ilrma-t-ip",
         "kwargs" : {
             "n_components":2,
-          "n_iter" : 50,
+          "n_iter" : 100,
+
+          "init": "pca",
+          "callback_checkpoints" : [50],
+          "taps": 5,
+          "delay": 2
+        }
+      },
+      "ilrma-t-iss-seq" : {
+        "algo" : "ilrma-t-iss-seq",
+        "kwargs" : {
+            "n_components":2,
+          "n_iter" : 100,
+
+          "init": "pca",
+          "callback_checkpoints" : [50],
+          "taps": 5,
+          "delay": 2
+        }
+      },
+      "ilrma-t-iss-joint" : {
+        "algo" : "ilrma-t-iss-joint",
+        "kwargs" : {
+            "n_components":2,
+          "n_iter" : 100,
 
           "init": "pca",
           "callback_checkpoints" : [50],
