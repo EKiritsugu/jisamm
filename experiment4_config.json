@@ -7,7 +7,7 @@
   
     "n_targets": [3],
   
-    "n_interferers": [ 10],
+    "n_interferers": [ 0 ],
     
   
     "n_mics": [3],
