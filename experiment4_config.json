@@ -3,11 +3,11 @@
   
     "seed": 12345,
     "repeat": 30,
-    "sinr": [ 0, 10],
+    "sinr": [ 30],
   
     "n_targets": [3],
   
-    "n_interferers": [ 0 ],
+    "n_interferers": [ 10 ],
     
   
     "n_mics": [3],
