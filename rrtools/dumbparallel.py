@@ -99,24 +99,25 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
     parameter_file = cli_args.parameters
 
     # Check the state of the github repository
-    if dummy_flag:
-        tag = 'dummy'
+    # if dummy_flag:
+    #     tag = 'dummy'
 
-    else:
-        # Not a dummy run, try to get the git hash
-        try:
-            tag = get_git_hash(base_dir, length=10)
+    # else:
+    #     # Not a dummy run, try to get the git hash
+    #     try:
+    #         tag = get_git_hash(base_dir, length=10)
 
-        except DirtyGitRepositoryError:
-            if test_flag:
-                import warnings
-                warnings.warn('The git repo has uncommited modifications. Going ahead for test.')
-                tag = 'test'
-            else:
-                raise ValueError('The git repo has uncommited modifications. Aborting simulation.')
+    #     except DirtyGitRepositoryError:
+    #         if test_flag:
+    #             import warnings
+    #             warnings.warn('The git repo has uncommited modifications. Going ahead for test.')
+    #             tag = 'test'
+    #         else:
+    #             raise ValueError('The git repo has uncommited modifications. Aborting simulation.')
 
-        except InvalidGitRepositoryError:
-            tag = ''
+    #     except InvalidGitRepositoryError:
+    #         tag = ''
+    tag = '0'
 
     # get all the parameters
     with open(parameter_file, 'r') as f:
