@@ -210,6 +210,7 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
 
         # Serial processing
         for i,ag in enumerate(arguments):
+            
             result = func_parallel_loop(ag)
 
             # save the new result!
@@ -221,7 +222,7 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
             ellapsed = int(time.time() - then)
             ellapsed_fmt = '{:02}:{:02}:{:02}'.format(
                     ellapsed // 3600, ellapsed % 3600 // 60, ellapsed % 60)
-
+            
             # estimate remaining time
             if ellapsed > 0:
                 rate = (i+1) / ellapsed  # tasks per second
@@ -235,6 +236,7 @@ def run(func_parallel_loop, func_gen_args, func_init=None, base_dir=None, result
                 s = int(tdelta.total_seconds())
                 time_remaining = '{:02}:{:02}:{:02}'.format(s // 3600, s % 3600 // 60, s % 60)
 
+            # print(i)
             formatted_status_line = status_line.format(i+1, n_tasks, 
                     forecast, ellapsed_fmt, time_remaining)
             print(formatted_status_line, end='\r')

@@ -27,6 +27,7 @@ def run(args, parameters):
     """
 
     # expand arguments
+    # print('simulating')
     sinr, n_targets, n_interf, n_mics, dist_ratio, room_params, seed = args
 
     n_sources = n_targets + n_interf
@@ -94,7 +95,7 @@ def run(args, parameters):
 
     # START BSS
     ###########
-
+    # print('bss')
     # shape: (n_frames, n_freq, n_mics)
     X_all = pra.transform.stft.analysis(mix.T, framesize, hop, win=win_a)
     X_mics = X_all[:, :, :n_mics]
