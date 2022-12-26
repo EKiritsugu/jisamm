@@ -57,7 +57,7 @@
           "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [50],
+          "callback_checkpoints" : [100],
           "taps": 5,
           "delay": 2
         }
@@ -69,7 +69,7 @@
           "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [50],
+          "callback_checkpoints" : [100],
           "taps": 5,
           "delay": 2
         }
@@ -81,7 +81,7 @@
           "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [50],
+          "callback_checkpoints" : [100],
           "taps": 5,
           "delay": 2
         }
@@ -91,10 +91,10 @@
         "algo" : "ilrma",
         "kwargs" : {
             "n_components":2,
-          "n_iter" : 50,
+          "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [50]
+          "callback_checkpoints" : [100]
 
         }
       },
@@ -103,10 +103,10 @@
         "algo" : "wpe+ilrma",
         "kwargs" : {
             "n_components":2,
-          "n_iter" : 50,
+          "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [50]
+          "callback_checkpoints" : [100]
 
         }
       }

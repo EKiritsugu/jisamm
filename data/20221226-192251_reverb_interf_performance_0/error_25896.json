@@ -1,0 +1,495 @@
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 20,
+        "seed": 1358822685,
+        "sdr": [
+            [
+                -3.1216089529644817,
+                -3.136764679130533,
+                -3.4426297044269534
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.1209742164383396,
+                -2.484748405067774,
+                -3.023285658916951
+            ],
+            NaN
+        ],
+        "cost": [
+            2073753.59945013
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259350
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 36027469,
+        "sdr": [
+            [
+                -3.7791126356775875,
+                -3.0260008110024588,
+                -2.916885218616767
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.236512352543326,
+                -3.0259363023169037,
+                -2.16963717179719
+            ],
+            NaN
+        ],
+        "cost": [
+            2100408.4946648567
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259352
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 1358822685,
+        "sdr": [
+            [
+                -3.644901655128596,
+                -3.6780619686585183,
+                -3.9943080766884647
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.6393098836900615,
+                -2.953252764467071,
+                -3.5400394392943655
+            ],
+            NaN
+        ],
+        "cost": [
+            2209575.459103497
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259350
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 1251993226,
+        "sdr": [
+            [
+                -3.6207068472943975,
+                -4.200533823839555,
+                -3.738306740130976
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.6151482477593797,
+                -3.3841456071909826,
+                -3.05339048014985
+            ],
+            NaN
+        ],
+        "cost": [
+            2226168.5283237323
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259350
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 20,
+        "seed": 657890619,
+        "sdr": [
+            [
+                -3.004775100032917,
+                -3.6708988519409185,
+                -3.1673904505624733
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.0041394012065235,
+                -2.5860108933165282,
+                -2.468398299697549
+            ],
+            NaN
+        ],
+        "cost": [
+            2104189.9157004487
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259362
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 789925284,
+        "sdr": [
+            [
+                -2.963059497459954,
+                -3.274873858423015,
+                -3.416508414760057
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.9629949385104304,
+                -2.422829228324988,
+                -2.7652175048620737
+            ],
+            NaN
+        ],
+        "cost": [
+            2079094.1405311944
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259370
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 659577591,
+        "sdr": [
+            [
+                -3.461394128338315,
+                -3.6799499956263437,
+                -4.081360321098217
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.4557606769717273,
+                -2.767254201057572,
+                -3.4460616080303526
+            ],
+            NaN
+        ],
+        "cost": [
+            2211674.162338442
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259344
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 1402032510,
+        "sdr": [
+            [
+                -3.6448673729507015,
+                -3.031567605813425,
+                -3.1260825913956083
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.771138587592687,
+                -3.0315033065658668,
+                -2.0685350801175697
+            ],
+            NaN
+        ],
+        "cost": [
+            2069440.908394531
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259380
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 137773602,
+        "sdr": [
+            [
+                -2.9539620682090812,
+                -3.366859335561963,
+                -3.1762616472873137
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.9538975955295896,
+                -2.6086059815444966,
+                -2.6177685262182337
+            ],
+            NaN
+        ],
+        "cost": [
+            2033129.9333468114
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259376
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 1712592594,
+        "sdr": [
+            [
+                -4.305405159181998,
+                -3.5568789987968312,
+                -3.6371247718513526
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.5341919846625087,
+                -2.389005252441269,
+                -3.631535256207738
+            ],
+            NaN
+        ],
+        "cost": [
+            2226628.343245821
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259366
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 1819941518,
+        "sdr": [
+            [
+                -3.725614725537291,
+                -4.0543849735326205,
+                -3.5998568977666308
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.7200614023146845,
+                -2.90891915892171,
+                -2.818430810188896
+            ],
+            NaN
+        ],
+        "cost": [
+            2197611.5962637607
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259346
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 75, in separate\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},
