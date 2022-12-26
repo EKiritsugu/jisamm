@@ -97,6 +97,18 @@
           "callback_checkpoints" : [50]
 
         }
+      },
+
+      "wpe+ilrma" : {
+        "algo" : "wpe+ilrma",
+        "kwargs" : {
+            "n_components":2,
+          "n_iter" : 50,
+
+          "init": "pca",
+          "callback_checkpoints" : [50]
+
+        }
       }
     }
   }

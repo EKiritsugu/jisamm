@@ -1,0 +1,116 @@
+{
+    "algorithm": "ilrma-t-iss-seq",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            50
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "ilrma-t-iss-seq",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 137773602,
+        "sdr": [
+            [
+                -2.9539620682090373,
+                -3.366859335561938,
+                -3.176261647287183
+            ],
+            [
+                5.663968108740907,
+                8.240528995345445,
+                5.570057420621346
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.953897595529545,
+                -2.608605981544498,
+                -2.6177685262180876
+            ],
+            [
+                16.35163064658056,
+                21.52818154021158,
+                16.8104212425163
+            ],
+            NaN
+        ],
+        "cost": [
+            2033129.933346811,
+            9594094.718315272
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259376
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 69, in separate\n    Y = ilrma_t_iss_seq(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 448, in ilrma_t_iss_seq\n    v_num = (Y * iR.swapaxes(0, 1)) @ np.conj(Y_tmp[:, s, :, None])  # (n_freq, n_tilde, 1)\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 254)\n"
+},
+{
+    "algorithm": "ilrma-t-iss-joint",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            50
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "ilrma-t-iss-joint",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 137773602,
+        "sdr": [
+            [
+                -2.9539620682090373,
+                -3.366859335561938,
+                -3.176261647287183
+            ],
+            [
+                5.663968108740907,
+                8.240528995345445,
+                5.570057420621346
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.953897595529545,
+                -2.608605981544498,
+                -2.6177685262180876
+            ],
+            [
+                16.35163064658056,
+                21.52818154021158,
+                16.8104212425163
+            ],
+            NaN
+        ],
+        "cost": [
+            2033129.933346811,
+            9594094.718315272
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259376
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 71, in separate\n    Y = ilrma_t_iss_joint(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 605, in ilrma_t_iss_joint\n    v_num = (Y * iR.swapaxes(0, 1)) @ np.conj(Y_tmp[:, s, :, None])  # (n_freq, n_tilde, 1)\nValueError: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 3 is different from 254)\n"
+},

@@ -71,6 +71,16 @@ def separate(
         Y = ilrma_t_iss_joint(X,  return_filters=False, **kwargs)
     elif algorithm == 'ilrma':
         Y = ilrma(X,  return_filters=False, **kwargs)
+    elif algorithm == 'wpe+ilrma':
+        from nara_wpe.wpe import wpe
+        Y = wpe(X.transpose(1, 2, 0),
+                    taps=5,
+                    delay=2,
+                    iterations=50,
+                    statistics_mode='full'
+                    ).transpose(2, 0, 1)
+
+        Y = ilrma(X,  return_filters=False, **kwargs)
 
 
     else:
@@ -107,7 +117,8 @@ is_single_source = {
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
     "ilrma-t-iss-seq":False,
-    "ilrma": False
+    "ilrma": False,
+    "wpe+ilrma": False
 }
 
 # This is a list that indicates which algorithms
@@ -132,7 +143,8 @@ is_dual_update = {
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
     "ilrma-t-iss-seq":False,
-    "ilrma": False
+    "ilrma": False,
+    "wpe+ilrma": False
 }
 
 is_determined = {
@@ -155,7 +167,8 @@ is_determined = {
     "ilrma-t-ip":True,
     "ilrma-t-iss-joint":True,
     "ilrma-t-iss-seq":True,
-    "ilrma": True
+    "ilrma": True,
+    "wpe+ilrma": True
 }
 
 is_overdetermined = {
@@ -178,7 +191,8 @@ is_overdetermined = {
         "ilrma-t-ip":False,
     "ilrma-t-iss-joint":False,
     "ilrma-t-iss-seq":False,
-    "ilrma": False
+    "ilrma": False,
+    "wpe+ilrma": False
 }
 
 is_iterative = {
@@ -201,5 +215,6 @@ is_iterative = {
         "ilrma-t-ip":True,
     "ilrma-t-iss-joint":True,
     "ilrma-t-iss-seq":True,
-    "ilrma": True
+    "ilrma": True,
+    "wpe+ilrma": True
 }

@@ -283,8 +283,8 @@ def ilrma_t_ip(
     ###########
 
     for epoch in range(n_iter):
-        if epoch%10==0:
-            print(epoch)
+        # if epoch%10==0:
+        #     print(epoch)
         # simple loop as a start
         for s in range(n_src):
             ## NMF
