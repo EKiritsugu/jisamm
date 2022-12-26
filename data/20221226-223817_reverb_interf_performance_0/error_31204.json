@@ -1,0 +1,225 @@
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 878579710,
+        "sdr": [
+            [
+                -3.0829408168450523,
+                -3.082581790857729,
+                -3.472631406937492
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.082876146981784,
+                -2.278999224031246,
+                -3.0035457221661943
+            ],
+            NaN
+        ],
+        "cost": [
+            2045567.7249702397
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259384
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 76, in separate\n    Y = wpe_v(X.transpose(1, 2, 0),\nTypeError: wpe_v() got an unexpected keyword argument 'statistics_mode'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 1959836417,
+        "sdr": [
+            [
+                -3.0625773439172024,
+                -3.098235792158575,
+                -2.774179228847118
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.0625127130835255,
+                -3.098171336078466,
+                -1.5830078490266575
+            ],
+            NaN
+        ],
+        "cost": [
+            2100416.805688032
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259350
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 76, in separate\n    Y = wpe_v(X.transpose(1, 2, 0),\nTypeError: wpe_v() got an unexpected keyword argument 'statistics_mode'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 1819941518,
+        "sdr": [
+            [
+                -3.725614725537291,
+                -4.0543849735326205,
+                -3.5998568977666308
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.7200614023146845,
+                -2.90891915892171,
+                -2.818430810188896
+            ],
+            NaN
+        ],
+        "cost": [
+            2197611.5962637607
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259346
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 76, in separate\n    Y = wpe_v(X.transpose(1, 2, 0),\nTypeError: wpe_v() got an unexpected keyword argument 'statistics_mode'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 20,
+        "seed": 1959836417,
+        "sdr": [
+            [
+                -3.118532851890535,
+                -3.165838979775098,
+                -2.8269654487555282
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.117895183298522,
+                -3.165203575984146,
+                -1.634622798618652
+            ],
+            NaN
+        ],
+        "cost": [
+            2114518.1110412944
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259350
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 76, in separate\n    Y = wpe_v(X.transpose(1, 2, 0),\nTypeError: wpe_v() got an unexpected keyword argument 'statistics_mode'\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ]
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 10,
+        "seed": 878579710,
+        "sdr": [
+            [
+                -3.676739830842404,
+                -3.611666215996076,
+                -4.118812943685806
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.6711317152871095,
+                -2.749156435344103,
+                -3.611615557998772
+            ],
+            NaN
+        ],
+        "cost": [
+            2206432.647306673
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259384
+    },
+    "tb": "Traceback (most recent call last):\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"C:\\Users\\aalab_linziyao\\Documents\\GitHub\\jisamm\\bss\\__init__.py\", line 76, in separate\n    Y = wpe_v(X.transpose(1, 2, 0),\nTypeError: wpe_v() got an unexpected keyword argument 'statistics_mode'\n"
+},
