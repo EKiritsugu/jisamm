@@ -80,7 +80,7 @@ def separate(
                     statistics_mode='full'
                     ).transpose(2, 0, 1)
 
-        Y = ilrma(X,  return_filters=False, **kwargs)
+        Y = ilrma(Y,  return_filters=False, **kwargs)
 
 
     else:
