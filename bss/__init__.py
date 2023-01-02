@@ -73,14 +73,14 @@ def separate(
         Y = ilrma(X,  return_filters=False, **kwargs)
     elif algorithm == 'wpe+ilrma':
         # from nara_wpe.wpe import wpe
-        Y = wpe_v(X.transpose(1, 2, 0),
-                    taps=5,
-                    delay=2,
-                    iterations=50,
-                    statistics_mode='full'
-                    ).transpose(2, 0, 1)
+        # Y = wpe_v(X.transpose(1, 2, 0),
+        #             taps=5,
+        #             delay=2,
+        #             iterations=50,
+        #             statistics_mode='full'
+        #             ).transpose(2, 0, 1)
 
-        Y = ilrma(Y,  return_filters=False, **kwargs)
+        Y = wpe_ilrma(X,  return_filters=False, **kwargs)
 
 
     else:

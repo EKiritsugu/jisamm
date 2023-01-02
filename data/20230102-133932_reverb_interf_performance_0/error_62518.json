@@ -1,0 +1,141 @@
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 1358822685,
+        "sdr": [
+            [
+                -3.079291805793262,
+                -3.06435615973394,
+                -3.380406884754419
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.079227411194514,
+                -2.4222359093294696,
+                -2.9654664921377116
+            ],
+            NaN
+        ],
+        "cost": [
+            2057140.685412559
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259294
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 83, in separate\n    Y = wpe_ilrma(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 856, in wpe_ilrma\n    np.matmul(T, V.swapaxes(1, 2), out=R)\nValueError: matmul: Output operand 0 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 15 is different from 2049)\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 561383553,
+        "sdr": [
+            [
+                -3.0040425194901172,
+                -3.758921594705191,
+                -3.161877503305554
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.0039780990969494,
+                -2.858255661084757,
+                -2.375403731824937
+            ],
+            NaN
+        ],
+        "cost": [
+            2067209.9342371328
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259370
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 83, in separate\n    Y = wpe_ilrma(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 856, in wpe_ilrma\n    np.matmul(T, V.swapaxes(1, 2), out=R)\nValueError: matmul: Output operand 0 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 15 is different from 2049)\n"
+},
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 1675701733,
+        "sdr": [
+            [
+                -2.997345476434413,
+                -3.3610875931075075,
+                -3.597012888809834
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -2.9972812063732936,
+                -2.417857542949086,
+                -2.844069964298158
+            ],
+            NaN
+        ],
+        "cost": [
+            1967237.9040781464
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259386
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 83, in separate\n    Y = wpe_ilrma(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 856, in wpe_ilrma\n    np.matmul(T, V.swapaxes(1, 2), out=R)\nValueError: matmul: Output operand 0 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)->(n?,m?) (size 15 is different from 2049)\n"
+},

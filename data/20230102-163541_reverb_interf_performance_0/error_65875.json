@@ -1,0 +1,47 @@
+{
+    "algorithm": "wpe+ilrma",
+    "n_src": 3,
+    "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+            100
+        ],
+        "taps": 5,
+        "delay": 2
+    },
+    "result": {
+        "algorithm": "wpe+ilrma",
+        "n_targets": 3,
+        "n_interferers": 10,
+        "n_mics": 3,
+        "rt60": 0.6344375,
+        "dist_ratio": 1.0,
+        "sinr": 30,
+        "seed": 1358822685,
+        "sdr": [
+            [
+                -3.079291805793262,
+                -3.06435615973394,
+                -3.380406884754419
+            ],
+            NaN
+        ],
+        "sir": [
+            [
+                -3.079227411194514,
+                -2.4222359093294696,
+                -2.9654664921377116
+            ],
+            NaN
+        ],
+        "cost": [
+            2057140.685412559
+        ],
+        "runtime": NaN,
+        "eval_time": NaN,
+        "n_samples": 259294
+    },
+    "tb": "Traceback (most recent call last):\n  File \"/Users/linziyao/Documents/GitHub/jisamm/simulation_loop.py\", line 177, in run\n    bss.separate(\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/__init__.py\", line 83, in separate\n    Y = wpe_ilrma(X,  return_filters=False, **kwargs)\n  File \"/Users/linziyao/Documents/GitHub/jisamm/bss/ilrma_t_function.py\", line 809, in wpe_ilrma\n    from nara_wpe.wpe import wpe\nModuleNotFoundError: No module named 'nara_wpe'\n"
+},

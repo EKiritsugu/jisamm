@@ -2,8 +2,8 @@
     "name": "reverb_interf_performance",
   
     "seed": 12345,
-    "repeat": 30,
-    "sinr": [ 10, 20, 30],
+    "repeat": 3,
+    "sinr": [ 30],
   
     "n_targets": [3],
   
@@ -106,7 +106,20 @@
           "n_iter" : 100,
 
           "init": "pca",
-          "callback_checkpoints" : [100]
+          "callback_checkpoints" : [100],
+          "taps": 5,
+          "delay": 2
+
+        }
+      },
+      "ilrma" : {
+        "algo" : "ilrma",
+        "kwargs" : {
+            "n_components":2,
+          "n_iter" : 50,
+
+          "init": "pca",
+          "callback_checkpoints" : [50]
 
         }
       }
