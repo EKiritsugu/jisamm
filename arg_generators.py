@@ -236,6 +236,7 @@ def exp2_gen_args(config):
 
 
 def generate(config):
+    print('generating')
     if config["name"] == "speed_contest":
         args = exp1_gen_args(config)
     elif config["name"] == "reverb_interf_performance":

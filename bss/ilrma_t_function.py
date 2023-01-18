@@ -812,7 +812,7 @@ def wpe_ilrma(
     X = wpe(X.transpose(1, 2, 0),
             taps=taps,
             delay=delay,
-            iterations=10,
+            iterations=n_iter,
             statistics_mode='full'
             ).transpose(2, 0, 1)
 

@@ -5,6 +5,7 @@ import time
 import traceback
 import numpy as np
 import pyroomacoustics as pra
+import soundfile
 
 # set MKL to only use one thread if present
 try:
@@ -67,6 +68,11 @@ def run(args, parameters):
     # signals after propagation but before mixing
     # (n_sources, n_mics, n_samples)
     premix = room.simulate(return_premix=True)
+
+    soundfile.write('wav_test/premix'+str(sinr)+'.wav',premix[:,0,:].T, 16000)
+    # print(np.shape(premix))
+
+
     n_samples = premix.shape[-1]
 
     # create the mix (n_mics, n_samples)
@@ -78,6 +84,9 @@ def run(args, parameters):
         n_tgt=n_targets,
         **parameters["mix_params"]
     )
+    # print(np.shape(np.max(mix,axis = 1)))
+    max_abs = np.max(np.abs(mix),axis = 1)
+    soundfile.write('wav_test/mix'+str(sinr)+'.wav',(mix[:,:]/max_abs[:,None]).T, 16000)
 
     # create the reference signals
     # (n_sources + 1, n_samples)

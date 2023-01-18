@@ -161,15 +161,16 @@ def callback_noise_mixer(
     """
     This callback function will rescale all the signals so that the SINR
     is fixed to a given value with a given ratio of diffuse noise
+    n_tgt = n_targets
     """
 
     if tgt_std is None:
         tgt_std = np.ones(n_tgt)
 
     # first normalize all separate recording to have unit power at microphone one
-    p_mic_ref = np.std(premix[:, ref_mic, :], axis=1)
-    premix /= p_mic_ref[:, None, None]
-    premix[:n_tgt, :, :] *= tgt_std[:, None, None]
+    p_mic_ref = np.std(premix[:, ref_mic, :], axis=1)# 得到参考信号的标准差
+    premix /= p_mic_ref[:, None, None]# 以参考信号为基准，所有信号方差归一化
+    premix[:n_tgt, :, :] *= tgt_std[:, None, None]# 参考通道方差单独再乘一个
 
     # Total variance of noise components
     var_noise_tot = 10 ** (-sinr / 10) * np.sum(tgt_std ** 2)
@@ -178,10 +179,10 @@ def callback_noise_mixer(
         # In this case, there are interferers
 
         # compute noise variance
-        sigma_n = np.sqrt((1 - diffuse_ratio) * var_noise_tot)
+        sigma_n = np.sqrt((1 - diffuse_ratio) * var_noise_tot)# 输出功率
 
         # now compute the power of interference signal needed to achieve desired SINR
-        sigma_i = np.sqrt((diffuse_ratio / (n_src - n_tgt)) * var_noise_tot)
+        sigma_i = np.sqrt((diffuse_ratio / (n_src - n_tgt)) * var_noise_tot)# 对于干扰信号源进行修正
         premix[n_tgt:n_src, :, :] *= sigma_i
 
     else:
@@ -189,8 +190,8 @@ def callback_noise_mixer(
         sigma_n = np.sqrt(var_noise_tot)
 
     # the background
-    bg = np.sum(premix[n_tgt:n_src, :, :], axis=0)
-    bg += sigma_n * np.random.randn(*premix.shape[1:])
+    bg = np.sum(premix[n_tgt:n_src, :, :], axis=0)# 把噪声信号通道求和
+    bg += sigma_n * np.random.randn(*premix.shape[1:])# 然后加上一丢丢白噪声
 
     # Mix down the recorded signals
     mix = np.sum(premix[:n_tgt, :], axis=0) + bg

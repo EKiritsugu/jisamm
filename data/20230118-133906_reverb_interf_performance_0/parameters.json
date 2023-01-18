@@ -1,0 +1,105 @@
+{
+  "name": "reverb_interf_performance",
+  "seed": 12345,
+  "repeat": 1,
+  "sinr": [
+    -10,
+    -5,
+    0,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30
+  ],
+  "n_targets": [
+    3
+  ],
+  "n_interferers": [
+    10
+  ],
+  "n_mics": [
+    3
+  ],
+  "dist_crit_ratio": [
+    1.0
+  ],
+  "samples_list": "./samples/metadata.json",
+  "mix_params": {
+    "diffuse_ratio": 0.99,
+    "ref_mic": 0
+  },
+  "room": {
+    "rt60_s": 0.6,
+    "critical_distance_m": 1.95,
+    "room_kwargs": {
+      "p": [
+        9,
+        12,
+        4.5
+      ],
+      "fs": 16000,
+      "absorption": 0.23,
+      "max_order": 34
+    },
+    "mic_array_geometry_m": [
+      [
+        0.02,
+        0.0,
+        0.0
+      ],
+      [
+        0,
+        0.02,
+        0
+      ],
+      [
+        -0.02,
+        0.0,
+        0.0
+      ]
+    ],
+    "mic_array_location_m": [
+      4.496,
+      5.889,
+      2.327
+    ]
+  },
+  "stft_params": {
+    "framesize": 4096,
+    "hop": 1024,
+    "window": "hamming"
+  },
+  "algorithm_kwargs": {
+    "ilrma": {
+      "algo": "ilrma",
+      "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+          100
+        ]
+      }
+    },
+    "wpe+ilrma": {
+      "algo": "wpe+ilrma",
+      "kwargs": {
+        "n_components": 2,
+        "n_iter": 100,
+        "init": "pca",
+        "callback_checkpoints": [
+          100
+        ],
+        "taps": 5,
+        "delay": 2
+      }
+    }
+  },
+  "_git_sha": "0",
+  "_date": "20230118-133906",
+  "_base_dir": "/Users/linziyao/Documents/GitHub/jisamm",
+  "_results_dir": "/Users/linziyao/Documents/GitHub/jisamm/data/20230118-133906_reverb_interf_performance_0/",
+  "_parallel": false
+}
